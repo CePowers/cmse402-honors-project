@@ -7,7 +7,7 @@ kepler.gl has an online hosted interface, but can also be used in jupyternoteboo
 For this example visualization I used data from NYC citibikes which can be found [here](https://s3.amazonaws.com/tripdata/index.html)
 
 ## Tutorial
-[View the tutorial notebook](https://nbviewer.org/github.com/CePowers/cmse402-honors-project/blob/main/tutorial.ipynb)
+[View the tutorial notebook](tutorial.html)
 
 ## Interactive Maps
 - [Tutorial map_1](map_1.html)
