@@ -7837,10 +7837,12 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/202603-citibike-tripdata_1.csv'</span><span class="p">)</span>
+<span class="c1"># sample 1000 rows for faster rendering</span>
+<span class="c1"># df_sample = df.sample(n=1000, random_state=42)</span>
 </pre></div>
 </div>
 </div>
@@ -7853,7 +7855,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/tmp/ipykernel_53424/1203156556.py:1: DtypeWarning: Columns (0: end_station_id) have mixed types. Specify dtype option on import or set low_memory=False.
+<pre>/tmp/ipykernel_53424/1846382770.py:1: DtypeWarning: Columns (0: end_station_id) have mixed types. Specify dtype option on import or set low_memory=False.
   df = pd.read_csv('data/202603-citibike-tripdata_1.csv')
 </pre>
 </div>
@@ -7876,7 +7878,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">map_1</span> <span class="o">=</span> <span class="n">keplergl</span><span class="o">.</span><span class="n">KeplerGl</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">'citibike'</span><span class="p">:</span> <span class="n">df</span><span class="p">})</span>
@@ -7895,23 +7897,6 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>User Guide: https://docs.kepler.gl/docs/keplergl-jupyter
 </pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/home/cepowers/miniconda3/envs/cmse-honorsproject/lib/python3.11/site-packages/jupyter_client/session.py:727: UserWarning: Message serialization failed with:
-Out of range float values are not JSON compliant
-Supporting this message is deprecated in jupyter-client 7, please make sure your message is JSON-compliant
-  content = self.pack(content)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>KeplerGl(data={'citibike':                  ride_id  rideable_type               started_at  \
-0       A324B30…</pre>
 </div>
 </div>
 </div>
@@ -8479,10 +8464,11 @@ Supporting this message is deprecated in jupyter-client 7, please make sure your
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">map_2</span><span class="o">.</span><span class="n">save_to_html</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">'citibike_map.html'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">map_1</span><span class="o">.</span><span class="n">save_to_html</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">'map_1.html'</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">map_1</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+<span class="n">map_2</span><span class="o">.</span><span class="n">save_to_html</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">'map_2.html'</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">map_2</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8495,8 +8481,23 @@ Supporting this message is deprecated in jupyter-client 7, please make sure your
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Map saved to citibike_map.html!
+<pre>Map saved to map_1.html!
+Map saved to map_2.html!
 </pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0123b6f0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 </div>
 </div>
 </div>
