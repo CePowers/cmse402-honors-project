@@ -1,2 +1,6 @@
-# cmse402-honors-project
-Repository for my CMSE 402 Honors project github pages site.
+# How to make a Connection Map using kepler.gl
+
+
+
+
+[Tutorial](tutorial.html)
