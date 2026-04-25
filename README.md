@@ -10,6 +10,8 @@ For this example visualization I used data from New York City citibikes which ca
 [View the tutorial notebook](tutorial.html)
 The tutorial is contained within the html file linked above. Unfortunately, kepler.gl maps are built as widgets and require a live kernel to render properly. The maps mentioned within the tutorial can be found below.
 
+To download the original notebook file visit this github [repository](https://github.com/CePowers/cmse402-honors-project/tree/main). The tutorial is found in `tutorial.ipynb` and you can find the packages I used in the file `environment.yml`
+
 ## Interactive Maps
 - [Tutorial map_1](map_1.html)
     (Map referenced as map_1 in the tutorial, containing the full dataset)
